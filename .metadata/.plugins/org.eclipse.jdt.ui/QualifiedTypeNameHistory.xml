@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="HW4.model.Users"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.Statement"/>
+<fullyQualifiedTypeName name="Lab19.model.Lab19Files"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletConfig"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="Lab20.model.Faculty"/>
+<fullyQualifiedTypeName name="SampleFinal.model.Contact"/>
+<fullyQualifiedTypeName name="SampleFinal.model.Fields"/>
+<fullyQualifiedTypeName name="Final.model.Courses"/>
+<fullyQualifiedTypeName name="Final.model.CoursesMap"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,47 @@
+package Final.model;
+
+public class Courses {
+	
+	public Courses()
+	{
+		
+	}
+	
+	int id;
+	String cname;
+	String term;
+	
+	public Courses(int id,String cname,String term)
+	{
+		this.id=id;
+		this.cname=cname;
+		this.term=term;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getCname() {
+		return cname;
+	}
+
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
+
+	public String getTerm() {
+		return term;
+	}
+
+	public void setTerm(String term) {
+		this.term = term;
+	}
+	
+	
+
+}

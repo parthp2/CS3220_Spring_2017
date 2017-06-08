@@ -1,0 +1,40 @@
+body
+{
+	background-color:lightgrey;
+}
+
+#h1
+{
+	text-align:center;
+	text-transform:uppercase;
+	color:blue;
+}
+
+#h3
+{
+	text-align:center;
+}
+
+p
+{
+	text-indent:2em;
+	line-height:1.5em;		
+}
+
+.path
+{
+	font-family: monospace; 
+	
+}
+
+em
+{
+	font-weight:bold;
+}
+
+#copy
+{
+	text-align:center;
+	vertical-align:botton;
+	font-size:small;
+}

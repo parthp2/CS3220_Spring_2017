@@ -1,0 +1,87 @@
+#main{
+    background: url(../img/layout/content_bg.jpg) repeat center center;
+}
+#content 
+{
+    margin: 0px auto;
+    width: 92%;
+    background-image:url(../img/layout/content_shadow_center.gif);
+    background-repeat: repeat;
+    background-position: left top, right top, center top;
+    padding: 25px 25px;
+    height:auto;
+}
+.viewtable tr th
+{
+	font-weight: bold;
+    background: #5999ec url(../img/layout/viewtable_bg.gif) repeat-x top center;
+    height: 28px;
+    line-height: 14px;
+    border-right: 1px solid #1c5db5;
+    border-left: 1px solid #5393e6;
+    border-top: 1px solid #9eb5d5;
+    border-bottom: 1px solid #6e91c1;
+    color: #d1e3fb;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.viewtable tr td {
+    border: 1px solid #dddddd;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.viewtable td img {
+    border: 0px;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#title
+ {
+    color: #164fa6;
+    font: 18px 'Trebuchet MS', Arial;
+    font-weight: bold;
+    background: #ffffff url(../img/layout/title_bg.gif) repeat-x top center;
+    border: 1px solid #dddddd;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.forminput
+{
+    font: 14px "Times New Roman", Times, serif;
+    padding: 5px;
+    border: 1px solid #c1c1c1;
+    background: #f1f1f1 url(../img/layout/input_bg.gif) repeat-x bottom center;
+}
+.subbutton {
+    font: 14px "Times New Roman", Times, serif;
+    background: transparent url(../img/layout/submit.gif) repeat-x bottom center;
+    padding: 4px 10px;
+    border: 1px solid #9cc332;
+}
+#csns_header {
+    background: transparent url(../img/layout/header_bg.gif) repeat-x bottom center;
+    height: 82px;
+}
+div#csns_header .wrap {
+    background: transparent url(../img/layout/header.gif) repeat-x bottom center;
+    margin: 0 auto;
+    height: 82px;
+    width: 1000px;
+}
+#csns_header #lpanel {
+    text-align: right;
+    margin-right: 20px;
+    padding-top: 28px;
+    float: right;
+    width: 50%;
+    position: relative;
+    float: right;
+}

@@ -1,0 +1,47 @@
+package Final.model;
+
+public class CoursesMap {
+	
+	public CoursesMap()
+	{
+		
+	}
+	
+	int id;
+	int qid;
+	int sid;
+	
+	public CoursesMap(int id,int qid, int sid)
+	{
+		this.id=id;
+		this.qid=qid;
+		this.sid=sid;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getQid() {
+		return qid;
+	}
+
+	public void setQid(int qid) {
+		this.qid = qid;
+	}
+
+	public int getSid() {
+		return sid;
+	}
+
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+	
+	
+
+}

@@ -1,0 +1,53 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p><strong>Contacts</strong></p>
+
+<p><a href="<c:url value='/AddContact' />" style="text-decoration:none">Add A Contact</a></p>
+
+
+<table border="1" cellpadding="2" cellspacing="2">
+	<thead>
+	</thead>
+	<tbody>
+	
+	<c:forEach items="${Contact}" var="loop">
+		<tr>
+			<td colspan="2"><strong>${loop.letter}</strong></td>
+		</tr>
+		<tr>
+			<td><a href="#" style="text-decoration:none">Amy</a></td>
+			<td>(123) 456-7890</td>
+		</tr>
+		<tr>
+			<td colspan="2"><strong>J</strong></td>
+		</tr>
+		<tr>
+			<td><a href="#" style="text-decoration:none">Joe</a></td>
+			<td>(234) 567-8901</td>
+		</tr>
+		<tr>
+			<td><a href="#" style="text-decoration:none">John</a></td>
+			<td>(345) 678-9012</td>
+		</tr>
+		<tr>
+			<td colspan="2"><strong>T</strong></td>
+		</tr>
+		<tr>
+			<td><a href="#" >Tom</a></td>
+			<td>(567) 890-1234</td>
+		</tr>
+		
+	</c:forEach>
+	</tbody>
+</table>
+
+</body>
+</html>

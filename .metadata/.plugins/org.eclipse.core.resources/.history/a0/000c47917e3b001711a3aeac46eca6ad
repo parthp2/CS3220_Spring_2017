@@ -1,0 +1,115 @@
+package Final.servlet;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Final.model.Courses;
+
+
+@WebServlet(urlPatterns ="/Homepage",loadOnStartup = 1)
+public class Homepage extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+   
+    public Homepage() {
+        super();
+        
+    }
+
+	
+	public void init(ServletConfig config) throws ServletException {
+		
+		 super.init( config );
+
+	        try
+	        {
+	            Class.forName( "com.mysql.jdbc.Driver" );
+	        }
+	        catch( ClassNotFoundException e )
+	        {
+	            throw new ServletException( e );
+	        }
+		
+	}
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		List<Courses> Courses=new ArrayList<Courses>();
+		List<Courses> Courses2=new ArrayList<Courses>();
+		
+		 Connection c = null;
+	        try
+	        {
+	        	String url = "jdbc:mysql://localhost/cs3220stu49";
+	            String username = "cs3220stu49";
+	            String password = "l#jN!vq#";
+	            
+	            String sql = "select * from courses";
+	            
+	           
+	            
+	            c = DriverManager.getConnection( url, username, password );
+	            
+	            Statement stmt = c.createStatement();
+	            ResultSet rs = stmt.executeQuery( sql );
+	            
+	           
+	            
+	            while( rs.next() )
+	            {
+	                Courses f = new Courses();
+	                f.setId( rs.getInt( "id" ) );
+	                f.setCname(rs.getString("cname"));
+	                f.setTerm(rs.getString("term"));
+	                f.setLetter(rs.getString("letter"));
+	                f.setNum(rs.getInt( "num" ));
+	                
+	                Courses.add(f);
+	                
+	            }
+	            
+	           
+	            c.close();
+	        }
+	        catch( SQLException e )
+	        {
+	            throw new ServletException( e );
+	        }
+	        finally
+	        {
+	            try
+	            {
+	                if( c != null ) c.close();
+	            }
+	            catch( SQLException e )
+	            {
+	                throw new ServletException( e );
+	            }
+	        }
+		
+	        request.setAttribute( "Courses", Courses );
+		
+		request.getRequestDispatcher("WEB-INF/Homepage.jsp").forward( request, response );
+		
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+}

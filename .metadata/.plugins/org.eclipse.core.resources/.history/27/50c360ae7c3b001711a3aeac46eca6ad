@@ -1,0 +1,59 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Homepage</title>
+</head>
+<body>
+
+
+<p style="margin-left: 40px;"><a href="<c:url value='/AddCourse' />" style="text-decoration:none">Add Course</a> | <a href="<c:url value='/CreateMapping' />" style="text-decoration:none">Create Course Mapping</a></p>
+
+<div style="margin-left: 40px;">
+<table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+		<tr>
+			<th scope="col">Quarter Courses</th>
+			<th scope="col">Semester Courses</th>
+			<th scope="col">Course Mappings</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+			<ul>
+			
+			<c:forEach items="${Courses}" var="loop">
+			
+				<li>CS122</li>
+				<li>CS201</li>
+				<li>CS202</li>
+				<li>CS203</li>
+				
+			</c:forEach>
+			</ul>
+			</td>
+			<td>
+			<ul>
+				<li>CS2011</li>
+				<li>CS2012</li>
+				<li>CS2013</li>
+			</ul>
+			</td>
+			<td>
+			<ul>
+				<li>(CS201, CS2011)</li>
+				<li>(CS202, CS2012)</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+</body>
+</html>

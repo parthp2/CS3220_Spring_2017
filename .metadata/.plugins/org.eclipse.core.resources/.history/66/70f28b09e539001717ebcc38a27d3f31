@@ -1,0 +1,102 @@
+package SampleFinal.servlet;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import SampleFinal.model.Contact;
+
+
+@WebServlet("/AddFields")
+public class AddFields extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+  
+    public AddFields() {
+        super();
+        
+    }
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		List<Contact> Contact=new ArrayList<Contact>();
+		
+		int id=Integer.parseInt(request.getParameter("id"));
+		
+		Connection c = null;
+        try
+        {
+        	String url = "jdbc:mysql://localhost/cs3220stu49";
+            String username = "cs3220stu49";
+            String password = "l#jN!vq#";
+            
+            String sql = "select * from contact where id='"+id+"'";
+            
+           
+            
+            c = DriverManager.getConnection( url, username, password );
+            
+            Statement stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( sql );
+            
+           
+            
+            while( rs.next() )
+            {
+                Contact f = new Contact();
+                f.setId( rs.getInt( "id" ) );
+                f.setName(rs.getString("name"));
+                f.setContact(rs.getString("contact"));
+                f.setLetter(rs.getString("letter"));
+                
+                Contact.add(f);
+                
+            }
+            
+           
+            c.close();
+        }
+        catch( SQLException e )
+        {
+            throw new ServletException( e );
+        }
+        finally
+        {
+            try
+            {
+                if( c != null ) c.close();
+            }
+            catch( SQLException e )
+            {
+                throw new ServletException( e );
+            }
+        }
+        
+        request.setAttribute( "Contact", Contact );
+		
+		request.getRequestDispatcher("WEB-INF/AddFields.jsp").forward( request, response );
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		int id=Integer.parseInt(request.getParameter("id"));
+		
+		String fname=request.getParameter("fname");
+		
+		String fvalue=request.getParameter("fvalue");
+	}
+
+}

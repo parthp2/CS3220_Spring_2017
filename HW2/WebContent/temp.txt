@@ -1,0 +1,16 @@
+response.setContentType("text/html");
+            		
+            		PrintWriter out=response.getWriter();
+
+out.println("<html><head><title>HomePage</title></head><body>");
+            		
+           		out.println("<p>"+fileName+"</p>");
+            		out.println("<p>"+type+"</p>");
+            		
+            		out.println("<p>"+size+"</p>");
+           		
+           		out.println("<p>"+dateobj+"</p>");
+           		
+            		out.println("<p>"+id+"</p>");
+            		
+           		            		out.println("</body></html>");

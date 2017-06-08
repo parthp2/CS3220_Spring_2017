@@ -1,0 +1,56 @@
+table
+{
+	border-collapse:collapse;
+}
+a:link
+{
+	text-decoration:none;
+}
+
+tr.t1
+{
+	border-collapse:collapse;	
+	border-bottom:3px solid black;
+}
+
+.line
+{
+	
+	border-bottom-style:double;
+	border-bottom-color:black;	
+}
+td.main
+{
+	border-bottom:1px solid black;
+}
+.f1
+{
+	width:28%;
+	float:left;
+	border:1px solid black;
+	padding:1em;
+}
+div section
+{
+	
+	padding:7px;
+}
+div section span
+{
+	font-weight: bold;
+	display: inline-block;
+	width:30%;
+
+}
+div section span
+{
+	display: inline-block;
+	width:35%;
+}
+div section span+span
+{
+	display: inline-block;
+	width:60%;
+}
+
+

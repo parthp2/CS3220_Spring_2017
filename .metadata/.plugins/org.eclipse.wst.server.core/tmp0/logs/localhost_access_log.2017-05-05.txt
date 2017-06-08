@@ -1,0 +1,7 @@
+127.0.0.1 - - [05/May/2017:13:27:23 -0700] "GET / HTTP/1.1" 404 1073
+0:0:0:0:0:0:0:1 - - [05/May/2017:13:27:26 -0700] "GET /HW5/Main HTTP/1.1" 200 590
+0:0:0:0:0:0:0:1 - - [05/May/2017:13:27:26 -0700] "GET /HW5/css/style.css HTTP/1.1" 200 2244
+0:0:0:0:0:0:0:1 - - [05/May/2017:13:27:26 -0700] "GET /HW5/img/layout/content_shadow_center.gif HTTP/1.1" 200 440
+0:0:0:0:0:0:0:1 - - [05/May/2017:13:27:26 -0700] "GET /HW5/img/layout/content_bg.jpg HTTP/1.1" 200 15078
+0:0:0:0:0:0:0:1 - - [05/May/2017:13:27:26 -0700] "GET /HW5/img/layout/title_bg.gif HTTP/1.1" 200 1746
+0:0:0:0:0:0:0:1 - - [05/May/2017:13:27:26 -0700] "GET /HW5/img/layout/submit.gif HTTP/1.1" 200 157
